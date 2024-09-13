@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from scipy.fftpack import fft, ifft, fftfreq
-import warnings
+#import warnings
 
 
 
@@ -84,7 +84,7 @@ class AccelerationData(object):
     
     def fft_denoise(self,df,graph=0,axis="resultant"):
         sampling_rate = self.freq #sample rate from data
-        warnings.filterwarnings('ignore')
+        #warnings.filterwarnings('ignore')
         f = df[axis].values
         t = df['t'].values
         n = len(f)
