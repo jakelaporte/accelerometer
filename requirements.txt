@@ -11,3 +11,7 @@ pandas
 scipy
 plotly
 streamlit
+easygui
+altair
+seaborn
+scikit-learn
