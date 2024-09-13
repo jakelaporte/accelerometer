@@ -9,3 +9,4 @@ numpy
 matplotlib
 pandas
 scipy
+plotly
