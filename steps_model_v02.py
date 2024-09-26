@@ -450,7 +450,7 @@ if select == options[0]:
             uploaded_file = st.file_uploader("Select .csv survey file.",type='csv')
             if uploaded_file is not None:
                 df = pd.read_csv(uploaded_file,index_col=0,keep_default_na=True)
-                acc = AccelerationData(df,57)
+                acc = AccelerationData(df,60)
                 st.session_state['current']=acc
                 st.write(acc.df)
     with tab2:
