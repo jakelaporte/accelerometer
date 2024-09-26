@@ -32,6 +32,9 @@ class AccelerationData(object):
         try:
             self.df['time'] = data[['time']].copy()
             self.df[['x','y','z']] = data[["x","y","z"]].copy()
+            st.write(self.df)
+            st.write(self.time)
+            st.write(len(self.df),len(self.time))
         except:
             self.df['time']=data.iloc[1:,0].copy()
             self.df[['x','y','z']] = data.iloc[1:,1:3].copy()
