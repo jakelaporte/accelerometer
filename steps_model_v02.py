@@ -33,8 +33,8 @@ class AccelerationData(object):
             self.df['time'] = data[['time']].copy()
             self.df[['x','y','z']] = data[["x","y","z"]].copy()
         except:
-            self.df['time']=data.iloc[:,0].copy()
-            self.df[['x','y','z']] = data.iloc[:,1:3].copy()
+            self.df['time']=data.iloc[1:,0].copy()
+            self.df[['x','y','z']] = data.iloc[1:,1:3].copy()
             self.time = np.arange(0,len(self.df)*self.delta_t,self.delta_t) 
         self.df['t']=self.time
         #example_duration - the time (in seconds) used to calculate statistics
