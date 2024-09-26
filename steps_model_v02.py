@@ -36,6 +36,9 @@ class AccelerationData(object):
             self.df[['x','y','z']] = data.iloc[1:,1:3].copy()
         self.time = np.arange(0,len(self.df)*self.delta_t,self.delta_t)
         self.df['t']=self.time
+        st.write(len(self.df),len(self.time))
+        st.write(self.df)
+        st.write(self.time)
         #example_duration - the time (in seconds) used to calculate statistics
         #smaller is better, but increases the amount of storage and time needed to calculate
         self.example_duration = 10
